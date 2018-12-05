@@ -6,15 +6,15 @@ It will give sample for how to use gorm with belong to, one to many and multiple
 1. database connection
 2. turn on debug
     There are two ways turning on GORM debug.
-    1.a. Turn on debug on specific method:  db.Debug().Create
-    1.b. Turn on log on all db operation: db.LogMode(true)
+    2.1. Turn on debug on specific method:  db.Debug().Create
+    2.2. Turn on log on all db operation: db.LogMode(true)
 3. In one to many relation entities, As long as foreign key is defined, related entities can be saved at same time.
    But there is tricky in the saving associated entity.
    save associated entities
-   3.a. when associated entities' id (primary key is set in advance), gorm will do the following operations on the
+   3.1. when associated entities' id (primary key is set in advance), gorm will do the following operations on the
         associated entities
         it will do update, select and then insert
-   3.b. when there is no id set, gorm will only do the insert.
+   3.2. when there is no id set, gorm will only do the insert.
    If performance is your concern, suggest not to set foreign key in gorm.
    If overwritten is your app's requirement, suggest to use foreign key in gorm.
 4. Preload associate entities in one to many relation
