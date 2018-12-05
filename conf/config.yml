@@ -1,0 +1,7 @@
+db:
+  type: sqlite
+  host: ./gorm.db
+  port:
+  user:
+  password:
+  useSSL: false
